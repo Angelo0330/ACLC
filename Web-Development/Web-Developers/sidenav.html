@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Compiled icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Fornt Awsome Icons-->
+  <script src="https://kit.fontawesome.com/f8d4c0b3a2.js" crossorigin="anonymous"></script>
+
+  <title>Side Nav</title>
+</head>
+<body class="grey lighten-2">
+
+  <nav class="purple lighten-1"> <!-- navbar content here  --> 
+  <div class="container">
+    <div class="nav-wrapper">
+         <a href="https://shopee.ph/" class="brand-logo">Shopee</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+                <ul class="right hide-on-med-and-down">
+                     <li>
+                       <a href="#">Home</a>
+                     </li>
+                     <li>
+                       <a href="#">About</a>
+                     </li>
+                     <li>
+                       <a href="#">Contact</a>
+                     </li>
+                   </ul>
+
+
+    </div>
+</div>
+</nav>
+<!--Slide Out / Sidenav-->
+<ul id="slide-out" class="sidenav">
+  <li><div class="user-view">
+    <div class="background">
+      <img src="pic/gels.png">
+    </div>
+    <a href="https://www.facebook.com/Ravens.angelo"><img class="circle" src="pic/cool.jpg">
+    </a>
+    <a href="#name"><span class="white-text name">John Doe</span>
+    </a>
+    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span>
+    </a>
+  </div></li>
+  <li>
+    <a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a>
+  </li>
+  <li>
+    <a href="#!">Second Link</a>
+  </li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li>
+    <a class="subheader">Subheader</a>
+  </li>
+  <li>
+    <a class="waves-effect" href="#!">Third Link With Waves</a>
+  </li>
+</ul>
+
+
+<!-- Jquery CDN-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+   <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script>
+ $(document).ready(function(){
+    $('.sidenav').sidenav({
+      edge:'left',
+      inDuration:200,
+      outDuration:300,
+      onOpenStart:null
+    });
+  });
+
+
+ </script>
+  
+</body>
+</html>

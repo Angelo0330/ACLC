@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <!--Compiled icons-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Fornt Awsome Icons-->
+   <script src="https://kit.fontawesome.com/f8d4c0b3a2.js" crossorigin="anonymous"></script>
+<!-- Custom CSS Pickers -->
+<style>
+.datepicker-date-display {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  background-color: #0f6ca1;
+  color: rgb(110, 185, 24);
+  padding: 20px 22px;
+  font-weight: 500;
+}</style>
+
+  <title>Forms</title>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <h1 class="amber-text">Date Pickers</h1>
+     <!--Date picker source-->
+      <div class="input-field">
+    
+    <input type="text" class="datepicker datepicker-date-display blue-text">
+    <label id="date">Choose Date</label>
+      </div>
+<br><br>
+<!-- Time Picker Source -->
+<h1 class="amber-text">Time Pickers</h1>
+<div class="input-field">
+ 
+  <input type="text" class="timepicker">
+  <label id="time">Choose Time</label>
+<br><br>
+<!-- Character Counter -->
+<h1 class="amber-text">Character Counter</h1>
+<div class="input-field">
+  <input id="input_text" type="text" data-length="10">
+  <label for="input_text">Post</label>
+</div>
+</div>
+
+<div class="input-field col s12">
+  <textarea id="textarea2" class="materialize-textarea" data-length="20"></textarea>
+  <label for="textarea2">Textarea</label>
+</div>
+
+<!-- AutoComplete -->
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">textsms</i>
+        <input type="text" id="autocomplete-input" class="autocomplete">
+        <label for="autocomplete-input">Type of Fruit</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+  </form>
+    <!-- End Container -->
+   </div>
+
+
+
+
+   <!-- Jquery CDN-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--DatePicker-->
+<script>
+    $(document).ready(function(){
+    $('.datepicker').datepicker(
+      {autoClose:true ,
+        yearRange: 30,
+        format:'mmmm dd,yyyy'
+      }
+    );
+    autoClose:true 
+    });
+</script>
+
+<!--TimePicker-->
+<script>
+  $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });
+  </script>
+  <!-- Character Counter -->
+  <script>
+     $(document).ready(function() {
+    $('input#input_text, textarea#textarea2').characterCounter();
+  });
+  </script>
+  <!-- Auto Complete -->
+  <script> $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Apple": null,
+        "Orange": null,
+        "Banana": null,
+        "Pearl": null,
+        "Black Berry": null,
+        "Pearl": null
+      },
+      minLength:2,
+      limit:2
+    });
+  });</script>
+</body>
+</html>
